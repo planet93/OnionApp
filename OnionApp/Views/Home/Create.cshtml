@@ -1,0 +1,31 @@
+﻿@*@model OnionApp.Domain.Core.Book*@
+@model OnionApp.Models.CreateUserViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create new User</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.FirstName, "Имя")
+    <br />
+    @Html.EditorFor(m => m.FirstName)
+    <br />
+    @Html.LabelFor(m => m.LastName, "Фамилия")
+    <br />
+    @Html.EditorFor(m => m.LastName)
+    <br />
+    @Html.LabelFor(m => m.Age, "Возраст")
+    <br />
+    @Html.EditorFor(m => m.Age)
+    <br />
+    @Html.LabelFor(m => m.Login, "Логин")
+    <br />
+    @Html.EditorFor(m => m.Login)
+    <br />
+    <input type="submit" value="Добавить" />
+}
+
+
